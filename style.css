@@ -117,7 +117,7 @@ html, body {
 .staff-wrapper {
 	margin-right: auto;
 	margin-left: auto;
-	width: 100%;
+	width: 80%;
 }
 
 .staff-image {
@@ -125,8 +125,8 @@ html, body {
 }
 
 #presentation-image {
-	width:100%;
-	max-width: 500px;
+	max-width: 100%;
+	width: 350px;
 	aspect-ratio: 1/1;
 }
 
@@ -147,6 +147,7 @@ html, body {
 }
 
 .todotext {
+	display: none;
 	color: red;
 	text-decoration: underline;
 	font-size: 14px;
@@ -163,13 +164,18 @@ footer {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	#big-image {
-		width: 100%;
-		max-width: 800px;
-		height: auto;
+		height: 50vh;
+		width: auto;
 	}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	
+	* {
+	}
+	#big-image {
+		width: 100%;
+		max-width: 800px;
+		height: auto;
+	}
 }

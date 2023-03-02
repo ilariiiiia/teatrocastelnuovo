@@ -1,208 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="description"
 		content="Gruppo teatro del Liceo Castelnuovo. 1984 prossimamente al Teatro dell'Affratellamento!">
+	<!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">-->
 	<title>Gruppo di teatro - Liceo Castelnuovo</title>
-	<link rel='mask-icon' href='favicons/favicon-32x32.png' color="white"/>
+	<link rel="canonical" href="https://teatro.nicolello.repl.co"/>
+	<link rel='mask-icon' href='/favicons/favicon-32x32.png' color="white"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<script type="text/javascript" src="imageTransition.js" defer></script>
-	<style>
-:root {
-	--dark: #333;
-	--light: #FFF;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root{
-		--dark: #FFF;
-		--light: #333;
-	}
-}
-
-html, body {
-	height: 100%;
-	width: 100%;
-	margin: 0px;
-	color: var(--dark);
-	background-color: var(--light);
-	line-height: 1.5;
-	font-size: 18px;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-#header {
-	z-index: 999;
-	position: fixed;
-	top: 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	height: 70px;
-	width: 100%;
-	background-color: #DDD;
-	transition: 0.2s linear
-}
-
-#header * {
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-#header-links {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	height:100%;
-	width:100%;
-}
-
-#header-links a {
-	color: #333;
-	text-decoration: underline;
-	transition: 0.2s linear;
-}
-
-#header-links a:hover {
-	color: white;
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
-}
-
-#big-image {
-	margin: 20px auto 20px auto;
-	height: 300px;
-	width: 100%;
-	position: relative;
-	text-align: center;
-	background-color: var(--light);
-}
-
-#big-image #wrapper-centered-image-text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-shadow: 0px 0px 10px #FFF;
-	color: #000;
-}
-
-#big-image img {
-	z-index: -1;
-	height: 100%;
-	max-width: 100%;
-	margin: 0px auto 0px auto;
-	opacity: 0.75;
-	filter: sepia(50%);
-}
-
-.content-wrapper h1 {
-	background-color: var(--dark);
-	color: var(--light);
-	padding: 0px 10px;
-}
-
-.content-wrapper {
-	max-width: 800px;
-	text-align: center;
-	margin: 10px auto 10px auto;
-	padding: 0px 10px 0px 10px;
-}
-
-.content-wrapper .content-h1-wrapper {
-	margin: 15px auto 15px auto;
-	width: max-content;
-	background-color: var(--light);
-	color: var(--dark);
-}
-
-.content-wrapper img {
-	max-width: 80%;
-	height: auto;
-}
-
-.staff-wrapper {
-	margin-right: auto;
-	margin-left: auto;
-	width: 80%;
-}
-
-.staff-image {
-	margin-bottom: 5px;
-}
-
-#presentation-image {
-	max-width: 100%;
-	width: 350px;
-	aspect-ratio: 1/1;
-}
-
-#loading-staff {
-	height: 3px;
-	background: linear-gradient(90deg, blue, red);
-}
-
-.staff-description {
-	padding-left: 5px;
-	padding-right: 5px
-}
-
-.link {
-	color: inherit;
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-.todotext {
-	color: red;
-	text-decoration: underline;
-	font-size: 14px;
-}
-
-footer {
-	width: 100%;
-	background-color: #DDD;
-	color: #333;
-	text-align: center;
-	padding: 5px 0px 5px 0px;
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-	#big-image {
-		height: 50vh;
-		width: auto;
-	}
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-	* {
-	}
-	#big-image {
-		width: 100%;
-		max-width: 800px;
-		height: auto;
-	}
-}
-	</style>
+	<link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-	<script type="text/javascript">
-		window.onhashchange = () => {
-			window.scrollBy(0, -80);
-		}
-	</script>
 	<div id="backToTop"
 		style="position:fixed;bottom:20px;right:10px;z-index:9999;background-color:rgba(255,255,255,0.4);display=none;transition:opacity 0.2s linear">
 		<a href="#" ; style="font-size: 40px; text-decoration: none">🔝</a>
@@ -211,6 +27,7 @@ footer {
 	</div>
 	<div id="header">
 		<div id="logo" onclick="window.scrollTo(0, 0)"
+			alt="logo del sito"
 			style=" width: 40px; height: 40px; background-image: url('assets/logo.png'); background-size: 100%">
 		</div>
 		<div id="header-links">
@@ -228,7 +45,7 @@ footer {
 	<!-- END OF HEADER -->
 	<!-- START OF CONTENT -->
 	<div id="big-image">
-		<img src="assets/start-image.jpg" loading="lazy"/>
+		<img src="assets/start-image.webp" alt="Studenti recitando per una prova" style="width:100%; height:auto"/>
 		<div id="wrapper-centered-image-text">
 			<h1 class="centered-text-image">
 				Gruppo di teatro
@@ -263,7 +80,7 @@ footer {
 				</div>
 			</div>
 			<div class="staff-image">
-				<img id="presentation-image" loading="lazy" src="">
+				<img id="presentation-image" alt="immagine di presentazione dei nostri professori" loading="lazy" src="">
 			</div>
 			<div class="staff-description">
 				<p id="presentation-text">
@@ -286,7 +103,7 @@ footer {
 			<br>Di seguito troverete il nostro copione:
 		</p>
 		<a href="assets/copione.pdf" target="_blank" class="link" style="display:block; margin-bottom: 20px; padding:5px; background-color: red; color:white; width:max-content; margin-right: auto; margin-left:auto">Link per vedere il copione</a>
-		<img src="assets/cover-1984.jpg" loading="lazy" />
+		<img alt="Immagine-copertina di 1984" src="assets/cover-1984.webp" loading="lazy" style="width:100%; height:auto" />
 		<p>
 			<strong>📅 Quando: </strong> il 25 maggio
 			<br>
@@ -295,9 +112,13 @@ footer {
 				73 </a>
 		</p>
 		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.873783261168!2d11.271713888330067!3d43.763133912643084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a538ad62eda53%3A0x910135dd15bcfae4!2sTeatro%20dell&#39;Affratellamento!5e0!3m2!1sen!2sit!4v1677182187984!5m2!1sen!2sit"
+			id="mappa"
+			title="Mappa con la posizione del teatro"
+			src=""
+			data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.873783261168!2d11.271713888330067!3d43.763133912643084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a538ad62eda53%3A0x910135dd15bcfae4!2sTeatro%20dell&#39;Affratellamento!5e0!3m2!1sen!2sit!4v1677182187984!5m2!1sen!2sit"
 			style="border: 2px solid black; width:75%; aspect-ratio: 1 / 1" allowfullscreen="" loading="lazy"
-			referrerpolicy="no-referrer-when-downgrade"></iframe>
+			referrerpolicy="no-referrer-when-downgrade">
+		</iframe>
 		<p>
 			L'entrata sarà di 10€ a persona. Mi raccomando, invitate quante più persone possibili!
 		</p>
@@ -310,10 +131,10 @@ footer {
 			L'aiuto più grosso è la vostra partecipazione; ciononostante sarebbe per noi un piacere se condivideste
 			l'invito a quante più persone possibili.
 		</p>
-		<a class="link"
+		<btn class="link"
 			onclick="navigator.clipboard.writeText('https://teatro.nicolello.repl.co');alert('Link copiato negli appunti. Grazie!')">
 			Clicca qui per copiare il link del sito
-		</a>
+		</btn>
 		<p>
 			Vi aspettiamo impazientemente!
 		</p>
