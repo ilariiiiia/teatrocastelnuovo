@@ -8,10 +8,6 @@
 		--dark: #FFF;
 		--light: #333;
 	}
-
-	#github {
-		background-color: rgba(255, 255, 255, 0.7);
-	}
 }
 
 html, body {
@@ -151,7 +147,6 @@ html, body {
 }
 
 .todotext {
-	display: none;
 	color: red;
 	text-decoration: underline;
 	font-size: 14px;
